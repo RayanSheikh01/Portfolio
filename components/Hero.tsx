@@ -1,3 +1,5 @@
+"use client";
+
 export default function Hero() {
     return (
       <section className="flex flex-col md:flex-row items-center justify-center h-[80vh] w-full bg-gradient-to-br  text-black">

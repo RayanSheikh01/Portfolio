@@ -18,7 +18,7 @@ export default function AboutPage() {
         <div className="flex-1">
           <h2 className="text-4xl font-bold mb-6 text-black">About Me</h2>
           <p className="text-gray-700 mb-6 leading-relaxed text-lg">
-            Hi, I’m <span className="font-semibold">Rayan Sheikh</span> — a Final Year Computer Science student at the University of Westminster, passionate about software engineering, data science and building impactful solutions. I’ve completed an internship at <span className="font-semibold">Budget Plus Services Limited</span>, where I built an inventory management application, and I hold the <span className="font-semibold">IBM Data Science Professional Certificate with honours</span>.
+            Hi, I’m <span className="font-semibold">Rayan Sheikh</span> — a Final Year Computer Science student at the University of Westminster, passionate about software engineering, data science and building impactful solutions. I’ve completed an internship at <span className="font-semibold">Budget Plus Services Limited</span>, where I built an inventory management application and I hold the <span className="font-semibold">IBM Data Science Professional Certificate with honours</span>.
           </p>
   
           {/* Skills */}

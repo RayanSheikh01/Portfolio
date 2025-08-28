@@ -1,13 +1,16 @@
 export default function ContactPage() {
     return (
-    <section className="pt-20">
-    <h2 className="text-3xl font-bold mb-6">Contact</h2>
-    <p className="mb-4">Let’s connect! You can reach me at:</p>
-    <ul className="space-y-2 text-black">
-    <li>Email: <a href="mailto:rayansheikh121@email.com" className="text-blue-600">rayansheikh121@email.com</a></li>
-    <li>LinkedIn: <a href="https://linkedin.com/in/rayan-sheikh" target="_blank" className="text-blue-600">linkedin.com/in/rayan-sheikh</a></li>
-    <li>GitHub: <a href="https://github.com/RayanSheikh01" target="_blank" className="text-blue-600">github.com/RayanSheikh01</a></li>
-    </ul>
-    </section>
-    )
-    }
+        <section className="pt-20">
+            {/* Contact Header */}
+            <header className="mb-8">
+                <h1 className="text-4xl font-bold text-black">Get in Touch</h1>
+                <p className="text-gray-600 mt-2">Feel free to reach out to me through any of the platforms below:</p>
+            </header>
+            <ul className="space-y-2 text-black">
+                <li>Email: <a href="mailto:rayansheikh121@email.com" className="text-blue-600">rayansheikh121@email.com</a></li>
+                <li>LinkedIn: <a href="https://linkedin.com/in/rayan-sheikh" target="_blank" className="text-blue-600">linkedin.com/in/rayan-sheikh</a></li>
+                <li>GitHub: <a href="https://github.com/RayanSheikh01" target="_blank" className="text-blue-600">github.com/RayanSheikh01</a></li>
+            </ul>
+        </section>
+    );
+}

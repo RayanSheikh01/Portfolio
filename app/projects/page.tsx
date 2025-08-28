@@ -8,12 +8,14 @@ title: "Data Dashboard",
 description:
 "Built in Python with Plotly Dash to analyse launch records and predict landings.",
 tech: ["Python", "Plotly Dash"],
+github: "https://github.com/RayanSheikh01/"
 },
 {
 title: "Inventory Management App",
 description:
 "Cross-organisation tool built with HTML, CSS and JavaScript during internship.",
 tech: ["HTML", "CSS", "JavaScript"],
+github: "https://github.com/RayanSheikh01/"
 },
 {
 title: "News Scraper",

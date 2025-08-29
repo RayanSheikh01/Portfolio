@@ -4,11 +4,11 @@ import ProjectCard from "@/components/ProjectCard"
 export default function ProjectsPage() {
 const projects = [
 {
-title: "Data Dashboard",
+title: "UK Fuel Prices Dashboard",
 description:
-"Built in Python with Plotly Dash to analyse launch records and predict landings.",
-tech: ["Python", "Plotly Dash"],
-github: "https://github.com/RayanSheikh01/"
+"Interactive UK Fuel Prices Dashboard built with Python, Dash and Bootstrap, visualising regional fuel trends with dynamic charts and KPIs.",
+tech: ["Python", "Plotly Dash", "Bootstrap", "Pandas", "CSV"],
+github: "https://github.com/RayanSheikh01/UKFuelDashboard"
 },
 {
 title: "Inventory Management App",

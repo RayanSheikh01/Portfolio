@@ -3,11 +3,13 @@ interface ProjectProps {
     description: string
     tech: string[]
     github: string
+    image: string
   }
   
-  export default function ProjectCard({ title, description, tech, github }: ProjectProps) {
+  export default function ProjectCard({ title, description, tech, github, image}: ProjectProps) {
     return (
       <div className="p-6 border rounded-2xl shadow-sm hover:shadow-lg hover:bg-blue-50 transform hover:scale-105 transition duration-300">
+        
         <h3 className="text-xl font-semibold mb-2 text-black">{title}</h3>
         <p className="text-gray-700 mb-3">{description}</p>
         <div className="flex flex-wrap gap-2 mb-4">
@@ -17,6 +19,7 @@ interface ProjectProps {
             </span>
           ))}
         </div>
+        <img src={image} alt={title} className="mb-4 rounded-lg" />
         <a href={github} target="_blank" className="text-blue-600 hover:underline">
           View on GitHub
         </a>

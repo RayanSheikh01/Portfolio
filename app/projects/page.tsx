@@ -31,7 +31,7 @@ image: "/UKFuelDashboard.png"
   description: "Django-based web app created in a group project to monitor employee wellbeing using a traffic light system for quick insights.",
   tech: ["Django", "Python", "SQLite", "HTML", "CSS", "JavaScript"],
   github: "https://github.com/DigitalDaVinchi/SD_GRP_Health-check",
-  image: "/UKFuelDashboard.png"
+  image: "/EmployeeFeedbackTrackerScreenshot.png"
 }
 ]
 

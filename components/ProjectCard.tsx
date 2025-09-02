@@ -19,7 +19,7 @@ interface ProjectProps {
             </span>
           ))}
         </div>
-        <img src={image} alt={title} className="mb-4 rounded-lg" />
+        <img src={image} alt={title} className="mb-4 rounded-lg h-50" />
         <a href={github} target="_blank" className="text-blue-600 hover:underline">
           View on GitHub
         </a>

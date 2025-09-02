@@ -12,12 +12,12 @@ github: "https://github.com/RayanSheikh01/UKFuelDashboard",
 image: "/UKFuelDashboard.png"
 },
 {
-title: "Inventory Management App",
+title: "Analysis of a Biased Dealer using Python and Q-Learning",
 description:
-"Cross-organisation tool built with HTML, CSS and JavaScript during internship.",
-tech: ["HTML", "CSS", "JavaScript"],
-github: "https://github.com/RayanSheikh01/",
-image: "/UKFuelDashboard.png"
+"Python simulation to train a Q-learning agent that successfully learned to overcome a statistically biased Blackjack dealer, boosting the player's win rate from 37% to 45%.",
+tech: ["Python", "Jupyter Notebook", "Pandas", "Matplotlib", "Q-Learning"],
+github: "https://github.com/RayanSheikh01/WeightedBlackjackSimulator",
+image: "/WeightedBlackjackSimImage.png"
 },
 {
 title: "News Scraper",

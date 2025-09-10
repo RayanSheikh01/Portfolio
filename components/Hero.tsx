@@ -19,7 +19,7 @@ export default function Hero() {
           </motion.span>
         </h1>
         <p className="text-lg md:text-xl mb-6 text-gray-700">
-          Computer Science Student & Aspiring Software Engineer
+          Computer Science Student & Aspiring SOC Analyst
         </p>
         <div className="space-x-4">
           <a

@@ -23,7 +23,7 @@ image: "/WeightedBlackjackSimImage.png"
 title: "Global Security Monitor",
 description:
 "Built an interactive cybersecurity dashboard that visualises global IP abuse data through real-time charts and tables using Python Dash and Plotly.",
-tech: ["Python", "Dash", "Plotly", "Data Visualisation", "API Integration", "Pandas", "Bootstrap", "Cybersecurity Analytics"],
+tech: ["Python", "Dash", "Plotly", "Pandas", "Bootstrap"],
 github: "https://github.com/RayanSheikh01/GlobalSecMonitor",
 image: "/GlobalMonitorImage.png"
 },

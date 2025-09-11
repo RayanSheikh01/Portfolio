@@ -1,15 +1,14 @@
 export default function AboutPage() {
     const skills = [
       "Python",
-      "JavaScript",
-      "C",
       "Java",
       "SQL",
-      "Data Science",
-      "Machine Learning",
-      "React",
-      "Next.js",
-      "Tailwind CSS",
+      "Cybersecurity",
+      "Ethical Hacking",
+      "Secure Software Development",
+      "Network Security",
+      "Vulnerability Assessment & Penetration Testing",
+      "Linux System Security"
     ];
   
     return (
@@ -18,7 +17,7 @@ export default function AboutPage() {
         <div className="flex-1">
           <h2 className="text-4xl font-bold mb-6 text-black">About Me</h2>
           <p className="text-gray-700 mb-6 leading-relaxed text-lg">
-            Hi, I’m <span className="font-semibold">Rayan Sheikh</span> — a Final Year Computer Science student at the University of Westminster, passionate about software engineering, data science and building impactful solutions. I’ve completed an internship at <span className="font-semibold">Budget Plus Services Limited</span>, where I built an inventory management application and I hold the <span className="font-semibold">IBM Data Science Professional Certificate with honours</span>.
+            Hi, I’m <span className="font-semibold">Rayan Sheikh</span> — a Final Year Computer Science student at the University of Westminster, passionate about cybersecurity, software engineering and building secure, impactful solutions. I’ve completed an internship at <span className="font-semibold">Budget Plus Services Limited</span>, where I developed an internal inventory management application, and I hold the <span className="font-semibold">IBM Data Science Professional Certificate with honours</span>, which strengthened my expertise in Python and analytical problem-solving.
           </p>
   
           {/* Skills */}

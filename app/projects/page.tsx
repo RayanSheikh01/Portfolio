@@ -20,12 +20,12 @@ github: "https://github.com/RayanSheikh01/WeightedBlackjackSimulator",
 image: "/WeightedBlackjackSimImage.png"
 },
 {
-title: "News Scraper",
+title: "Global Security Monitor",
 description:
-"GUI app using Python to fetch and display top stories from multiple news RSS feeds.",
-tech: ["Python", "Tkinter"],
-github: "https://github.com/RayanSheikh01/newsFeedParser",
-image: "/UKFuelDashboard.png"
+"Built an interactive cybersecurity dashboard that visualises global IP abuse data through real-time charts and tables using Python Dash and Plotly.",
+tech: ["Python", "Dash", "Plotly", "Data Visualisation", "API Integration", "Pandas", "Bootstrap", "Cybersecurity Analytics"],
+github: "https://github.com/RayanSheikh01/GlobalSecMonitor",
+image: "/GlobalMonitorImage.png"
 },
 {title: "Employee Feedback Tracker",
   description: "Django-based web app created in a group project to monitor employee wellbeing using a traffic light system for quick insights.",

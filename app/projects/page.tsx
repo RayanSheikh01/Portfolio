@@ -1,15 +1,16 @@
 import ProjectCard from "@/components/ProjectCard"
+import { image } from "framer-motion/client"
 
 
 export default function ProjectsPage() {
 const projects = [
 {
-title: "UK Fuel Prices Dashboard",
+title: "Global Security Monitor",
 description:
-"Interactive UK Fuel Prices Dashboard built with Python, Dash and Bootstrap, visualising regional fuel trends with dynamic charts and KPIs.",
-tech: ["Python", "Plotly Dash", "Bootstrap", "Pandas", "CSV"],
-github: "https://github.com/RayanSheikh01/UKFuelDashboard",
-image: "/UKFuelDashboard.png"
+"Built an interactive cybersecurity dashboard that visualises global IP abuse data through real-time charts and tables using Python Dash and Plotly.",
+tech: ["Python", "Dash", "Plotly", "Pandas", "Bootstrap"],
+github: "https://github.com/RayanSheikh01/GlobalSecMonitor",
+image: "/GlobalMonitorImage.png"
 },
 {
 title: "Analysis of a Biased Dealer using Python and Q-Learning",
@@ -20,15 +21,16 @@ github: "https://github.com/RayanSheikh01/WeightedBlackjackSimulator",
 image: "/WeightedBlackjackSimImage.png"
 },
 {
-title: "Global Security Monitor",
+title: "Catch The Phish – Phishing Detection Simulator",
 description:
-"Built an interactive cybersecurity dashboard that visualises global IP abuse data through real-time charts and tables using Python Dash and Plotly.",
-tech: ["Python", "Dash", "Plotly", "Pandas", "Bootstrap"],
-github: "https://github.com/RayanSheikh01/GlobalSecMonitor",
-image: "/GlobalMonitorImage.png"
+"Catch The Phish is an interactive React + TypeScript quiz that helps users identify phishing emails by testing their ability to spot suspicious senders, subjects and content.",
+tech: ["React", "TypeScript", "Tailwind CSS", "Vite", "JSON"],
+github: "https://github.com/RayanSheikh01/CatchThePhish",
+image: "/CTPscreenshot.png"
+
 },
 {title: "Employee Feedback Tracker",
-  description: "Django-based web app created in a group project to monitor employee wellbeing using a traffic light system for quick insights.",
+  description: "Django-based web app created in a group project to monitor employee wellbeing using a traffic light system for quick insights. \n Note: As this is a university assessed project, the code is private.",
   tech: ["Django", "Python", "SQLite", "HTML", "CSS", "JavaScript"],
   github: "https://github.com/DigitalDaVinchi/SD_GRP_Health-check",
   image: "/EmployeeFeedbackTrackerScreenshot.png"

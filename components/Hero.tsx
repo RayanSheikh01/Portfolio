@@ -1,6 +1,6 @@
-import { Analytics } from "@vercel/analytics/next"
-
 "use client";
+
+import { Analytics } from "@vercel/analytics/next"
 
 import { motion } from "framer-motion";
 

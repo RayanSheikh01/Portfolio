@@ -4,67 +4,79 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+const links = [
+  { href: "/", label: "home" },
+  { href: "/about", label: "about" },
+  { href: "/projects", label: "projects" },
+  { href: "/experience", label: "experience" },
+  { href: "/contact", label: "contact" },
+];
+
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
-  const links = [
-    { href: "/", label: "Home" },
-    { href: "/about", label: "About" },
-    { href: "/projects", label: "Projects" },
-    { href: "/experience", label: "Experience" },
-    { href: "/contact", label: "Contact" },
-  ];
-
-  // Close mobile menu on route change
   useEffect(() => {
     setOpen(false);
   }, [pathname]);
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-md shadow-md px-6 py-4 flex items-center justify-between transition-all">
-      {/* Logo */}
-      <div className="text-2xl font-bold text-blue-600">Rayan Sheikh</div>
+    <nav className="sticky top-0 z-50 w-full border-b border-[#23272f] bg-[#08090b]/85 backdrop-blur-md">
+      <div className="container mx-auto flex items-center justify-between px-6 py-3">
+        {/* Prompt-style wordmark */}
+        <Link href="/" className="font-mono text-sm text-[#e6e8eb]">
+          <span className="text-[#f5a524]">rayan@sec</span>
+          <span className="text-[#8b939e]">:~</span>
+          <span className="text-[#8b939e]">{pathname === "/" ? "/" : pathname}</span>
+          <span className="ml-1 inline-block h-4 w-2 translate-y-[3px] bg-[#f5a524]" aria-hidden />
+        </Link>
 
-      {/* Desktop Links */}
-      <div className="hidden md:flex space-x-6">
-        {links.map((link) => (
-          <Link
-            key={link.href}
-            href={link.href}
-            className={`px-3 py-2 rounded-lg font-medium transition-colors ${
-              pathname === link.href
-                ? "bg-blue-100 text-blue-700"
-                : "text-gray-800 hover:bg-blue-50 hover:text-blue-700"
-            }`}
-          >
-            {link.label}
-          </Link>
-        ))}
+        {/* Desktop */}
+        <div className="hidden md:flex items-center gap-1">
+          {links.map((link) => {
+            const active = pathname === link.href;
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`px-3 py-1.5 font-mono text-sm transition-colors ${
+                  active
+                    ? "text-[#f5a524]"
+                    : "text-[#8b939e] hover:text-[#e6e8eb]"
+                }`}
+              >
+                {active && <span className="mr-1">&gt;</span>}
+                {link.label}
+              </Link>
+            );
+          })}
+        </div>
+
+        {/* Mobile toggle */}
+        <button
+          onClick={() => setOpen(!open)}
+          aria-expanded={open}
+          aria-label="Toggle navigation"
+          className="md:hidden font-mono text-xl text-[#8b939e] hover:text-[#f5a524]"
+        >
+          {open ? "[x]" : "[=]"}
+        </button>
       </div>
 
-      {/* Mobile Hamburger */}
-      <button
-        onClick={() => setOpen(!open)}
-        className="md:hidden text-gray-800 text-2xl focus:outline-none"
-      >
-        {open ? "✕" : "☰"}
-      </button>
-
-      {/* Mobile Menu */}
+      {/* Mobile menu */}
       <div
-        className={`absolute top-full left-0 w-full md:hidden bg-white shadow-md rounded-b-2xl overflow-hidden transition-all duration-300 ${
-          open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        className={`md:hidden overflow-hidden border-t border-[#23272f] transition-[max-height] duration-300 ${
+          open ? "max-h-80" : "max-h-0"
         }`}
       >
         {links.map((link) => (
           <Link
             key={link.href}
             href={link.href}
-            className={`block px-6 py-3 border-b border-gray-100 font-medium ${
+            className={`block px-6 py-3 font-mono text-sm border-b border-[#16191e] ${
               pathname === link.href
-                ? "bg-blue-100 text-blue-700"
-                : "text-gray-800 hover:bg-blue-50 hover:text-blue-700"
+                ? "text-[#f5a524]"
+                : "text-[#8b939e] hover:text-[#e6e8eb]"
             }`}
           >
             {link.label}

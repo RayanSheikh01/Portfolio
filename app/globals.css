@@ -1,28 +1,59 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-background: var(--background, #f0f9ff); /* fallback light blue */
-  --color-foreground: var(--foreground, #000000);
-  --font-sans: var(--font-geist-sans, Arial, Helvetica, sans-serif);
-  --font-mono: var(--font-geist-mono, monospace);
+  --color-bg: #08090b;
+  --color-panel: #101216;
+  --color-panel-2: #161a20;
+  --color-line: #23272f;
+  --color-text: #e6e8eb;
+  --color-muted: #8b939e;
+  --color-accent: #f5a524;
+  --font-sans: var(--font-plex-sans), system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground: #ffffff;
-  }
-}
-
-/* Remove default margins and set background */
 html, body {
-  margin: 0;         /* remove browser default margins */
+  margin: 0;
   padding: 0;
-  background: white; /* matches your Hero gradient base */
-  color: var(--color-foreground);
-  font-family: var(--font-sans);
+  background: #08090b;
+  color: #e6e8eb;
+  font-family: var(--font-plex-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
+}
+
+/* Faint console grid, fixed behind all content */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    linear-gradient(rgba(245, 165, 36, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(245, 165, 36, 0.035) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 20%, transparent 75%);
+}
+
+::selection {
+  background: rgba(245, 165, 36, 0.28);
+}
+
+:focus-visible {
+  outline: 2px solid #f5a524;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+  html { scroll-behavior: auto; }
 }

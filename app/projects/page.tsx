@@ -1,51 +1,87 @@
 import ProjectCard from "@/components/ProjectCard"
-import { image } from "framer-motion/client"
 
-
-export default function ProjectsPage() {
-const projects = [
-{
-title: "Global Security Monitor",
-description:
-"Built an interactive cybersecurity dashboard that visualises global IP abuse data through real-time charts and tables using Python Dash and Plotly.",
-tech: ["Python", "Dash", "Plotly", "Pandas", "Bootstrap"],
-github: "https://github.com/RayanSheikh01/GlobalSecMonitor",
-image: "/GlobalMonitorImage.png"
-},
-{
-title: "Analysis of a Biased Dealer using Python and Q-Learning",
-description:
-"Python simulation to train a Q-learning agent that successfully learned to overcome a statistically biased Blackjack dealer, boosting the player's win rate from 37% to 45%.",
-tech: ["Python", "Jupyter Notebook", "Pandas", "Matplotlib", "Q-Learning"],
-github: "https://github.com/RayanSheikh01/WeightedBlackjackSimulator",
-image: "/WeightedBlackjackSimImage.png"
-},
-{
-title: "Catch The Phish – Phishing Detection Simulator",
-description:
-"Catch The Phish is an interactive React + TypeScript quiz that helps users identify phishing emails by testing their ability to spot suspicious senders, subjects and content.",
-tech: ["React", "TypeScript", "Tailwind CSS", "Vite", "JSON"],
-github: "https://github.com/RayanSheikh01/CatchThePhish",
-image: "/CTPscreenshot.png"
-
-},
-{title: "Employee Feedback Tracker",
-  description: "Django-based web app created in a group project to monitor employee wellbeing using a traffic light system for quick insights. \n Note: As this is a university assessed project, the code is private.",
-  tech: ["Django", "Python", "SQLite", "HTML", "CSS", "JavaScript"],
-  github: "https://github.com/DigitalDaVinchi/SD_GRP_Health-check",
-  image: "/EmployeeFeedbackTrackerScreenshot.png"
+export const metadata = {
+  title: "Projects | Rayan Sheikh",
+  description: "Security engineering, threat intelligence and offensive security projects.",
 }
+
+const security = [
+  {
+    title: "Global Security Monitor",
+    description:
+      "Threat intelligence dashboard that ingests worldwide IP abuse reports and surfaces high-risk regions and attack trends. Live API ingestion with a simulation mode for offline analysis.",
+    tech: ["Python", "Dash", "Plotly", "Pandas", "Threat Intel", "AbuseIPDB"],
+    github: "https://github.com/RayanSheikh01/GlobalSecMonitor",
+    image: "/GlobalMonitorImage.png",
+  },
+  {
+    title: "Catch The Phish",
+    description:
+      "Security awareness trainer that drills users on real phishing indicators: spoofed sender domains, deceptive display names and urgency cues. Scored rounds with immediate feedback.",
+    tech: ["React", "TypeScript", "TailwindCSS", "Phishing Analysis", "Security Awareness"],
+    github: "https://github.com/RayanSheikh01/CatchThePhish",
+    image: "/CTPscreenshot.png",
+  },
+  {
+    title: "AI CTF Solver",
+    description:
+      "Autonomous agent that solves web and reconnaissance CTF challenges inside a sandboxed Docker container, then publishes its own write-up of the exploitation path.",
+    tech: ["Python", "LangGraph", "Docker", "Offensive Security", "CTF", "pytest"],
+    github: "https://github.com/RayanSheikh01/AICTFSolver",
+  },
+  {
+    title: "RagProbe",
+    description:
+      "Evaluation harness for retrieval-augmented LLM systems. Injects counterfactual facts into the corpus so a correct answer can only come from retrieval, never pretraining, then scores retrieval rank, answer correctness and groundedness. A separate judge model rules on entailment to avoid self-grading bias.",
+    tech: ["Python", "RAG Evaluation", "LLM-as-Judge", "Counterfactual Probes", "NumPy"],
+    github: "https://github.com/RayanSheikh01/RagProbe",
+  },
 ]
 
+const other = [
+  {
+    title: "UK Fuel Dashboard",
+    description:
+      "Data pipeline and dashboard tracking UK fuel prices from public retailer feeds, with cleaning, aggregation and regional comparison.",
+    tech: ["Python", "Data Engineering", "Dashboards"],
+    github: "https://github.com/RayanSheikh01/UKFuelDashboard",
+    image: "/UKFuelDashboard.png",
+  },
+  {
+    title: "Weighted Blackjack Simulator",
+    description:
+      "Monte Carlo simulation of blackjack strategies under weighted deck conditions, used to model expected value across thousands of hands.",
+    tech: ["Python", "Jupyter", "Monte Carlo"],
+    github: "https://github.com/RayanSheikh01/WeightedBlackjackSimulator",
+    image: "/WeightedBlackjackSimImage.png",
+  },
+]
 
-return (
-<section className="pt-20">
-<h2 className="text-3xl font-bold mb-6 text-black">Projects</h2>
-<div className="grid md:grid-cols-2 gap-6">
-{projects.map((p) => (
-<ProjectCard key={p.title} {...p} />
-))}
-</div>
-</section>
-)
+export default function ProjectsPage() {
+  return (
+    <div className="pt-16">
+      <p className="font-mono text-sm text-[#8b939e]">
+        <span className="text-[#f5a524]">&#36;</span> ls ~/projects
+      </p>
+      <h1 className="mt-3 font-mono text-4xl font-semibold text-[#e6e8eb]">Projects</h1>
+      <p className="mt-4 max-w-2xl text-[#8b939e] leading-relaxed">
+        Security tooling built end to end: threat intelligence, phishing defence,
+        offensive automation and AI system security.
+      </p>
+
+      <h2 className="mt-14 mb-6 font-mono text-sm text-[#f5a524]">{"// security"}</h2>
+      <div className="grid gap-6 md:grid-cols-2">
+        {security.map((p) => (
+          <ProjectCard key={p.title} {...p} />
+        ))}
+      </div>
+
+      <h2 className="mt-16 mb-6 font-mono text-sm text-[#f5a524]">{"// other engineering"}</h2>
+      <div className="grid gap-6 md:grid-cols-2">
+        {other.map((p) => (
+          <ProjectCard key={p.title} {...p} />
+        ))}
+      </div>
+    </div>
+  )
 }

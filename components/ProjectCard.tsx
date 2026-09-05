@@ -1,29 +1,48 @@
 interface ProjectProps {
-    title: string
-    description: string
-    tech: string[]
-    github: string
-    image: string
-  }
-  
-  export default function ProjectCard({ title, description, tech, github, image}: ProjectProps) {
-    return (
-      <div className="p-6 border rounded-2xl shadow-sm hover:shadow-lg hover:bg-blue-50 transform hover:scale-105 transition duration-300">
-        
-        <h3 className="text-xl font-semibold mb-2 text-black">{title}</h3>
-        <p className="text-gray-700 mb-3">{description}</p>
-        <div className="flex flex-wrap gap-2 mb-4">
+  title: string
+  description: string
+  tech: string[]
+  github: string
+  image?: string
+}
+
+export default function ProjectCard({ title, description, tech, github, image }: ProjectProps) {
+  return (
+    <article className="group flex flex-col border border-[#23272f] bg-[#101216] transition-colors hover:border-[#f5a524]/50">
+      {image && (
+        <div className="h-44 overflow-hidden border-b border-[#23272f]">
+          <img
+            src={image}
+            alt={title}
+            className="h-full w-full object-cover opacity-70 saturate-50 transition duration-300 group-hover:opacity-100 group-hover:saturate-100"
+          />
+        </div>
+      )}
+
+      <div className="flex flex-1 flex-col p-6">
+        <h3 className="font-mono text-lg font-medium text-[#e6e8eb]">{title}</h3>
+        <p className="mt-3 text-sm leading-relaxed text-[#8b939e]">{description}</p>
+
+        <div className="mt-5 flex flex-wrap gap-2">
           {tech.map((t) => (
-            <span key={t} className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">
+            <span
+              key={t}
+              className="border border-[#23272f] bg-[#161a20] px-2.5 py-1 font-mono text-xs text-[#8b939e]"
+            >
               {t}
             </span>
           ))}
         </div>
-        <img src={image} alt={title} className="mb-4 rounded-lg h-50" />
-        <a href={github} target="_blank" className="text-blue-600 hover:underline">
-          View on GitHub
+
+        <a
+          href={github}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-6 inline-block font-mono text-sm text-[#f5a524] hover:underline"
+        >
+          view source
         </a>
       </div>
-    )
-  }
-  
+    </article>
+  )
+}
